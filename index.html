@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu">
+            <h1>Memory Game</h1>
+            <p>Select Difficulty:</p>
+            <button id="easy">Easy (3x4)</button>
+            <button id="medium">Medium (4x4)</button>
+            <button id="hard">Hard (6x6)</button>
+        </div>
+        <div id="game-board" class="hidden"></div>
+        <div id="status-bar" class="hidden">
+            <p>Moves: <span id="moves-count">0</span></p>
+            <p>Time: <span id="timer">0:00</span></p>
+            <button id="hint">Hint</button> <!-- Hint button -->
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff9c4; /* Light yellow for the whole screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Game container */
+#game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+/* Menu styling */
+#menu h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#menu button {
+    font-size: 18px; /* Adjusted size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; /* Resized buttons */
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Game board styling */
+#game-board {
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+    background-color: #fff9c4; /* Same light yellow as body background */
+    padding: 10px;
+    border-radius: 10px;
+    width: auto;
+}
+
+/* Card styling */
+.card {
+    background-color: #007bff;
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(0.95); /* Card becomes slightly smaller on hover */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 5px;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card.matched {
+    background-color: #28a745;
+    pointer-events: none;
+}
+
+/* Status bar styling */
+#status-bar {
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#status-bar p {
+    margin: 5px;
+}
+
+#status-bar button {
+    font-size: 16px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#status-bar button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight hover effect */
+}
+
+#hint {
+    margin: 0 5px; /* Slight spacing between buttons */
+}
+
+
+/* Confetti effect */
+.confetti {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color);
+    border-radius: 50%;
+    animation: fall 3s infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
